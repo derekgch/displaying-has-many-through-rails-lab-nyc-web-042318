@@ -36,3 +36,25 @@ You'll need to create all of the migrations, models, routes, controllers, and vi
 We've provided a seed file so you can have some data to play around with –– run `rake db:seed` once your migrations and models are complete.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/displaying-has-many-through-rails-lab' title='Displaying Has Many Through Rails Lab'>Displaying Has Many Through Rails Lab</a> on Learn.co and start learning to code for free.</p>
+
+
+
+
+Appointment
+rails g model Appointment appointment_datetime:datetime --no-test-framework
+  has a date and time (FAILED - 9)
+  belongs to a patient (FAILED - 10)
+  belongs to a doctor (FAILED - 11)
+
+Doctor
+  has a name (FAILED - 12)
+  has a department (FAILED - 13)
+  has many appointments (FAILED - 14)
+  has many patients, through appointments (FAILED - 15)
+
+Patient
+  has a name (FAILED - 16)
+
+  has an age (FAILED - 17)
+  has many appointments (FAILED - 18)
+  has many doctors, through appointments (FAILED - 19)
